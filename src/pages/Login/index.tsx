@@ -6,6 +6,7 @@ import * as yup from "yup";
 
 import { Container, LoginContainer, Column, Spacing, Title } from "./styles";
 import { defaultValues, IFormLogin } from "./types";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup
   .object({
@@ -18,15 +19,25 @@ const schema = yup
   .required();
 
 const Login = () => {
+  
+  const navigate = useNavigate();
+
   const {
+    watch,
     control,
     formState: { errors, isValid },
   } = useForm<IFormLogin>({
     resolver: yupResolver(schema),
-    mode: "onBlur",
+    mode: "onChange",
     defaultValues,
-    reValidateMode: "onChange",
   });
+
+  const form = watch();
+  console.log(form);
+
+const handleLogin = () => {
+navigate("/home")
+}
 
   return (
     <Container>
@@ -49,7 +60,7 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" disabled={!isValid} onClick={handleLogin} />
         </Column>
       </LoginContainer>
     </Container>
