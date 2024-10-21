@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Conclusão do Projeto React com Validação de Formulário
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição do Projeto
 
-## Available Scripts
+Este projeto foi desenvolvido com o objetivo de criar um formulário de registro com validação utilizando React, `useForm` e `Yup`. A aplicação permite que os usuários insiram dados e valide essas entradas antes do envio do formulário.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
 
-### `npm start`
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **useForm**: Hook do React Hook Form para gerenciar o estado do formulário.
+- **Yup**: Biblioteca de validação para criação de esquemas de validação de formulário.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Funcionalidades
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Validação em tempo real das entradas do formulário.
+- Mensagens de erro específicas para cada campo.
+- Submissão de formulário somente se todas as validações forem satisfeitas.
 
-### `npm test`
+## Sobre useForm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O `useForm` é um hook fornecido pelo React Hook Form que simplifica a gestão do estado de formulários em aplicações React. Ele permite:
 
-### `npm run build`
+- Criar e registrar campos de formulário.
+- Gerenciar o estado de cada campo, incluindo valores, erros e estado de validação.
+- Integrar-se facilmente com outras bibliotecas de validação, como `Yup`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Sobre Yup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O `Yup` é uma biblioteca de validação JavaScript que permite definir esquemas de validação. Com `Yup`, você pode:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Criar esquemas de validação para diferentes tipos de dados (strings, números, objetos, arrays, etc.).
+- Definir regras de validação complexas e personalizadas.
+- Gerar mensagens de erro amigáveis e específicas.
 
-### `npm run eject`
+## Rodando o Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para rodar o projeto localmente, siga os passos abaixo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone o repositório do projeto:
+    ```bash
+    git clone https://github.com/RRDMELO/trilha-react-desafio-4.git
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd trilha-react-desafio-4
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Instale as dependências necessárias:
+    ```bash
+    npm install
+    ```
 
-## Learn More
+4. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Após esses passos, o projeto estará rodando localmente e você poderá acessá-lo pelo navegador em `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Conclusão
+
+O uso de `useForm` junto com `Yup` permitiu a criação de um sistema de validação robusto e eficiente para nosso formulário de registro. Essas ferramentas não só simplificaram o gerenciamento de estados e validações no formulário, mas também melhoraram a experiência do usuário com mensagens de erro claras e validação em tempo real.
